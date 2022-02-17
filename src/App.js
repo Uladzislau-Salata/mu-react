@@ -1,41 +1,40 @@
 import React from "react";
 import "./App.css";
 
-function App() {
+// function App() {
+//   const users = [
+//     { name: "user1", surn: "surn1", age: 30 },
+//     { name: "user2", surn: "surn2", age: 31 },
+//     { name: "user3", surn: "surn3", age: 32 },
+//   ];
+//   const res = users.map(function (s, index) {
+//     return (
+//       <li key={index}>
+//         {s.name} {s.surn}: {s.age}
+//       </li>
+//     );
+//   });
 
-	// const arr = [
-	// 	<li>1</li>,
-	// 	<li>2</li>,
-	// 	<li>3</li>,
-	// 	<li>4</li>,
-	// 	<li>5</li>,
-	// ];
-
-//   let arr=[];
-//   for (let i = 1; i < 6; i++){
-//     arr.push(<p>{i}</p>);
-//  }
-
-// const arr = ['a', 'b', 'c', 'd', 'e'];
-// let res =arr.map(function (par,index) {
-//   return <li key={index}>{par}</li>
-// })
-
-
+  //   const users = [
+  //   {id:1, name: "user1", surn: "surn1", age: 30 },
+  //   {id:2, name: "user2", surn: "surn2", age: 31 },
+  //   {id:3, name: "user3", surn: "surn3", age: 32 },
+  // ];
+  // const res = users.map(function (s) {
+  //   return (
+  //     <li key={s.id}>
+  //       {s.name} {s.surn}: {s.age}
+  //     </li>
+  //   );
+  // });
 
   return (
     <>
-{/* <ul>{arr}</ul>
-С помощью этого массива получите результатом рендеринга следующий код: */}
+      {/* <ul>{res}</ul>
+      Выведите элементы этого массива в виде списка ul. */}
 
-{/* <ul>{arr}</ul>
-С помощью цикла for сформируйте следующий код: */}
-
-{/* <ul>{res}</ul>
-Модифицируйте ваше решение предыдущей задачи в соответствии с описанным. */}
-
-
-
+       {/* <ul>{res}</ul>
+       Модифицируйте предыдущую задачу, добавив в массив id и использовав их в качестве значений атрибута key. */}
 
 
     </>
