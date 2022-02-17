@@ -2,27 +2,22 @@ import React from "react";
 import "./App.css";
 
 function App() {
-  // function show1() {
-  //   alert(1);
-  // }
-  // function show2() {
-  //   alert(2);
+  // function evy(event) {
+  //   console.log(event.target);
   // }
 
-// function show(elem) {
-//   alert(elem);
-// }
+  // function func(arg,event,a ) {
+  //   console.log(arg,event,a );
+  // }
 
   return (
     <>
-      {/* <button onClick={show1}>act1</button>
-      <button onClick={show2}>act2</button>
-      Сделайте так, чтобы по клику на первую кнопку срабатывала первая функция, а по клику на вторую кнопку - вторая функция. */}
+      {/* <button onClick={evy}>act</button>
+Дана кнопка. По клику на нее получите выведите в консоль event.target клика. */}
 
-		{/* <button onClick={()=>show('1')}>act1</button>
-		<button onClick={()=>show('2')}>act2</button>
-		<button onClick={()=>show('3')}>act3</button>
-    Сделайте так, чтобы по клику на первую кнопку алертом выводилось число 1, по клику на вторую кнопку - число 2, а по клику на третью - число 3. */}
+      {/* <button onClick={(event) => func("eee",event,'123' )}>act</button>
+      Модифицируйте предыдущую задачу так, чтобы объект с событием передавался вторым параметром функции, находясь между первым и третьим параметрами.
+       */}
 
     </>
   );
