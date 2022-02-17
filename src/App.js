@@ -2,22 +2,41 @@ import React from "react";
 import "./App.css";
 
 function App() {
-  // function evy(event) {
-  //   console.log(event.target);
-  // }
 
-  // function func(arg,event,a ) {
-  //   console.log(arg,event,a );
-  // }
+	// const arr = [
+	// 	<li>1</li>,
+	// 	<li>2</li>,
+	// 	<li>3</li>,
+	// 	<li>4</li>,
+	// 	<li>5</li>,
+	// ];
+
+//   let arr=[];
+//   for (let i = 1; i < 6; i++){
+//     arr.push(<p>{i}</p>);
+//  }
+
+// const arr = ['a', 'b', 'c', 'd', 'e'];
+// let res =arr.map(function (par,index) {
+//   return <li key={index}>{par}</li>
+// })
+
+
 
   return (
     <>
-      {/* <button onClick={evy}>act</button>
-Дана кнопка. По клику на нее получите выведите в консоль event.target клика. */}
+{/* <ul>{arr}</ul>
+С помощью этого массива получите результатом рендеринга следующий код: */}
 
-      {/* <button onClick={(event) => func("eee",event,'123' )}>act</button>
-      Модифицируйте предыдущую задачу так, чтобы объект с событием передавался вторым параметром функции, находясь между первым и третьим параметрами.
-       */}
+{/* <ul>{arr}</ul>
+С помощью цикла for сформируйте следующий код: */}
+
+{/* <ul>{res}</ul>
+Модифицируйте ваше решение предыдущей задачи в соответствии с описанным. */}
+
+
+
+
 
     </>
   );
