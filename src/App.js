@@ -2,35 +2,34 @@ import React from "react";
 import "./App.css";
 
 function App() {
-  // const attr = "block";
+  // let text;
+  // 	const isAdult = false;
+  // if (isAdult){
+  // text=<p>true</p>;
+  // }else{
+  // text=<p>false</p>;
+  // }
+  // Сделайте так, чтобы в зависимости от значения isAdult на экране показался или один абзац с текстом, или другой.
 
-  // const attr = "block";
+  // let a;
+  // const isAdmin = true;
+  // if (isAdmin) {
+  //   a = (
+  //     <div>
+  //       <p>1</p>
+  //       <p>2</p>
+  //     </div>
+  //   );
+  // }
+  // Сделайте так, чтобы, если isAdmin имеет значение true, на экране показался див с абзацами. В противном случае ничего показывать не нужно.
 
-  // const class1 = "block1";
-  // const class2 = "block2";
-
-  // const str1 = "label";
-  // const str2 = "block";
-  // const str3 = "elem";
 
   return (
     <>
-      {/* <div id={attr}>text</div>;
-      Вставьте значение константы attr в атрибут id нашего дива. */}
+      {/* {text} */}
 
-      {/* <div className={attr}>text</div>;
-      Вставьте значение константы attr в атрибут class нашего дива. */}
-
-      {/* <p className={class1}>text</p>
-      <p className={class2}>text</p>
-      Код, однако, не работает. Исправьте ошибку автора кода. */}
-
-      {/* <label id={str1} htmlFor={str2} className={str3}>
-        text
-      </label>
-      <br />
-      <input id={str2} />
-      Код не работает. Исправьте ошибки автора кода. */}
+      {/* {a} */}
+      
     </>
   );
 }
