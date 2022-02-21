@@ -1,26 +1,38 @@
-import { nanoid } from "nanoid";
 import React from "react";
 import "./App.css";
 
-
 function App() {
-  // function id(s) {
-  //   let a=nanoid(s);
-  //   return a;
-  // }
-  // const prods = [
-  //   {id: id(), name: 'product1', cost: 100},
-  //   {id: id(), name: 'product2', cost: 200},
-  //   {id: id(), name: 'product3', cost: 300},
+  // const users = [
+  //   { id: 1, name: "user1", surn: "surn1", age: 30 },
+  //   { id: 2, name: "user2", surn: "surn2", age: 31 },
+  //   { id: 3, name: "user3", surn: "surn3", age: 32 },
   // ];
-  // let res=prods.map(function (s) {
-  //    return <p key={s.id}>{s.name}:{s.cost}</p>
+
+  // const rows = users.map(function (s) {
+  //   return (
+  //     <tr key={s.id}>
+  //       <td>{s.name}</td>
+  //       <td>{s.surn}</td>
+  //       <td>{s.age}</td>
+  //     </tr>
+  //   );
   // });
-  // Сделайте массив объектов с юзерами, сгенерировав им id с помощью нашей функции.
+
   return (
     <>
-{/* {res} */}
+      {/* <table>
+        <thead>
+          <tr>
+            <td>Имя</td>
+            <td>Фамилия</td>
+            <td>Возраст</td>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
     </>
+    Выведите элементы этого массива в виде таблицы table так, чтобы каждое поле объекта попало в свой тег td. Сделайте заголовки колонок вашей таблицы. */}
+
   );
 }
 
