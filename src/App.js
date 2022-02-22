@@ -1,38 +1,70 @@
-import React from "react";
+import { nanoid } from "nanoid";
+// import React from "react";
+import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  // const users = [
-  //   { id: 1, name: "user1", surn: "surn1", age: 30 },
-  //   { id: 2, name: "user2", surn: "surn2", age: 31 },
-  //   { id: 3, name: "user3", surn: "surn3", age: 32 },
-  // ];
+  // let [name, setName] = useState("prod");
+  // function clickHandler() {
+  //   setName("xxx");
+  // }
 
-  // const rows = users.map(function (s) {
-  //   return (
-  //     <tr key={s.id}>
-  //       <td>{s.name}</td>
-  //       <td>{s.surn}</td>
-  //       <td>{s.age}</td>
-  //     </tr>
-  //   );
-  // });
+  // let [name, setName] = useState("prod");
+  // let [cost, setCost] = useState("1000");
+
+  // let [inCart, setInCart] = useState(false);
+  // console.log(inCart);
+
+  // let [count, setCount] = useState(0);
+
+  let [name, setName] = useState("Name1");
+  let [surname, setSurname] = useState("Surname1");
+  let [age, setAge] = useState("20");
+  let [count, setCount] = useState(true);
+
+  let [vis, setVis] = useState(true);
+
+
+
 
   return (
     <>
-      {/* <table>
-        <thead>
-          <tr>
-            <td>Имя</td>
-            <td>Фамилия</td>
-            <td>Возраст</td>
-          </tr>
-        </thead>
-        <tbody>{rows}</tbody>
-      </table>
-    </>
-    Выведите элементы этого массива в виде таблицы table так, чтобы каждое поле объекта попало в свой тег td. Сделайте заголовки колонок вашей таблицы. */}
+      {/* <span>{name}</span>
+      <button onClick={()=>setName('xxx')}>btn1</button> */}
 
+      {/* <span>{name}</span>
+      <span>{cost}</span>
+      <button onClick={()=>setName('xxx')}>btn1</button>
+      <button onClick={()=>setCost('5205')}>btn2</button> */}
+
+      {/* <span>{inCart ? "в корзине" : "не в корзине"}</span>
+      <button onClick={()=>setInCart(!inCart)}>btn1</button> */}
+
+      {/* <span>{count}</span>
+ <button onClick={()=>setCount(count+1)}>btn1</button> */}
+
+      <span>
+        {name} {surname}: {age}
+      </span>
+      <p>{count ? "забанен" : "не забанен"}</p>
+      {/* <button onClick={() => setCount(false)}>ban</button>
+      <button onClick={() => setCount(true)}>raz ban</button> */}
+      if (condition) {
+      <button onClick={() => setCount(false)}>
+        ban
+      </button>
+      } else {
+      <button onClick={() => setCount(true)}>
+        raz ban
+      </button>
+      }
+
+
+      <br />
+      <button onClick={() => setName("Ivan")}>btn1</button>
+      <button onClick={() => setSurname("Ivanov")}>btn2</button>
+      <button onClick={() => setAge("27")}>btn3</button>
+    </>
   );
 }
 
