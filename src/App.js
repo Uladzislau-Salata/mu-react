@@ -4,78 +4,95 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  // const [value1,setValue1]=useState('text1');
-  // const [value2,setValue2]=useState('text2');
-
-  // const [value1,setValue1]=useState('text1');
-  // const [value2,setValue2]=useState('text2');
-
-  // const [value1, setValue1] = useState("");
-  // const [value2, setValue2] = useState("2022");
-  // function ege(ev) {
-  //   let date = new Date();
-  //   let a=date.getFullYear();
-  //   setValue1(ev.target.value);
-  //   setValue2(a-Number(ev.target.value));
-  // }
-
-  // const [value1, setValue1] = useState("0");
-  // const [value2, setValue2] = useState("32");
-  // function temp(ev) {
-  //   setValue1(ev.target.value);
-  //   setValue2((Number(ev.target.value) * 9) / 5 + 32);
-  // }
-
   // const [value1, setValue1] = useState(0);
   // const [value2, setValue2] = useState(0);
-  // const [value3, setValue3] = useState(0);
-  // const [value4, setValue4] = useState(0);
-  // const [value5, setValue5] = useState(0);
-  // function temp1(ev) {
-  //   setValue1(ev.target.value);
-  // };
-  // function temp2(ev) {
-  //   setValue2(ev.target.value);
-  // };
-  // function temp3(ev) {
-  //   setValue3(ev.target.value);
-  // };
-  // function temp4(ev) {
-  //   setValue4(ev.target.value);
-  // };
-  // function temp5(ev) {
-  //   setValue5(ev.target.value);
-  // };
+  // const [result, setResult] = useState(0);
 
-  return (
+  // console.log(date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
+  //     + ' ' + addzero(date.getDate()) + '.' + addzero(date.getMonth() + 1) + '.' + date.getFullYear());
+
+  // let date= new Date();
+  // let nowdate=date.getFullYear()+'-'+Number(date.getMonth()+1)+'-'+date.getDate();
+  //   const [value1, setValue1] = useState(nowdate);
+  //   const [value2, setValue2] = useState(nowdate);
+  //   const [result, setResult] = useState(0);
+  //   function red() {
+  //     let arr1 = value1.split("-");
+  //     let date1 = new Date(arr1[0], Number(arr1[1]) - 1, arr1[2]);
+  //     let arr2 = value2.split("-");
+  //     let date2 = new Date(arr2[0], Number(arr2[1]) - 1, arr2[2]);
+  //     let a =Math.round(date2.getTime() - date1.getTime()) / (1000 * 60 * 60 * 24);
+  //     return a;
+  //   }
+
+  // const [value1, setValue1] = useState("");
+  // const [result, setResult] = useState(0);
+  // function fact(s) {
+  //   let a = 1;
+  //   for (let i = 1; i <= s; i++) {
+  //     a *= i;
+  //   }
+  //   console.log(a);
+  //   return a;
+  // }
+
+  // const [value1, setValue1] = useState("");
+  // const [result, setResult] = useState(0);
+  // function del(num) {
+  //   let a = [];
+  //   for (let i = 1; i <= num; i++) {
+  //     if (num % i == 0) {
+  //       a.push(i);
+  //     }
+  //   }
+  //   console.log(a);
+  //   let b = 1;
+  //   for (let u of a) {
+  //     b *= u;
+  //   }
+  //   return b;
+  // }
+
+  return(
     <>
-      {/* <input value={value1} onChange={(ev)=>setValue1(ev.target.value)} />
-      <p>{value1}</p>
-      <input value={value2} onChange={(ev)=>setValue2(ev.target.value)} />
-      <p>{value2}</p>
-      Сделайте два инпута. Пусть текст первого инпута выводится в первый абзац, а текст второго инпута - во второй абзац */}
+      {/* <input value={value1} onChange={event=>setValue1(event.target.value)} />
+      <input value={value2} onChange={event=>setValue2(event.target.value)} />
+      <button onClick={()=>setResult(Number(value1)+Number(value2))}>btn</button>
+      <button onClick={()=>setResult(Number(value1)*Number(value2))}>btn</button>
+      <p>result: {result}</p>
+      Даны два инпута, две кнопки и абзац. Пусть в инпуты вводятся числа. По нажатию на первую кнопку найдите сумму чисел, а по нажатию на вторую кнопку - произведение. Результат выводите в абзац. */}
 
-      {/* <input value={value1} onChange={(ev) => setValue1(ev.target.value)} />
-      <p>{value1.length}</p>
-      <input value={value2} onChange={(ev) => setValue2(ev.target.value)} />
-      <p>{value2.length}</p>
-      Дан инпут. Дан абзац. Сделайте так, чтобы при вводе текста в инпут, в абзаце выводилось количество введенных в инпут символов. */}
+      {/* <input
+        value={value1}
+        onFocus={() => setValue1("")}
+        onChange={(event) => setValue1(event.target.value)}
+      />
+      <input
+        value={value2}
+        onFocus={() => setValue2("")}
+        onChange={(event) => setValue2(event.target.value)}
+      />
+      <button onClick={() => setResult(red())}>btn</button>
+      <p>result: {result}</p> */}
+      {/* Даны два инпута, кнопка и абзац. Пусть в инпуты вводятся даты в формате 2025-12-31. По нажатию на кнопку найдите разницу между датами в днях и результат выведите в абзац.*/}
+      {/* Модифицируйте предыдущую задачу так, чтобы по умолчанию в инпутах стояла текущая дата. */}
 
-      {/* <input value={value1} onChange={ege} />
-      <p>{value2}</p>
-      Дан инпут и абзац. В инпут вводится возраст пользователя. Сделайте так, чтобы при наборе текста, в абзаце автоматически появлялся год рождения пользователя. */}
+      {/* <input
+        value={value1}
+        onChange={(event) => setValue1(event.target.value)}
+        onBlur={() => setResult(fact(value1))}
+      />
+      <p>result: {result}</p>
+      Дан инпут и абзац. В инпут вводится число. По потери фокуса выведите в абзац сумму цифр введенного числа. */}
 
-      {/* <input value={value1} onChange={temp} />
-      <p>{value2}</p>
-      Дан инпут и абзац. В инпут вводятся градусы Фаренгейта. Сделайте так, чтобы при наборе текста, в абзаце автоматически выполнялась конвертация в градусы Цельсия. */}
+      {/* <input
+        value={value1}
+        onChange={(event) => setValue1(event.target.value)}
+        onBlur={() => setResult(del(Number(value1)))}
+      />
+      <p>result: {result}</p>
+      Дан инпут и абзац. В инпут вводится число. По потери фокуса выведите в абзац произведение делителей введенного числа. */}
 
-      {/* <input value={value1} onChange={temp1} /><br/>
-      <input value={value2} onChange={temp2} /><br/>
-      <input value={value3} onChange={temp3} /><br/>
-      <input value={value4} onChange={temp4} /><br/>
-      <input value={value5} onChange={temp5} />
-      <p>{(Number(value1) + Number(value2) + Number(value3) + Number(value4) + Number(value5)) / 5}</p>
-      Даны 5 инпутов. Сделайте так, чтобы при вводе чисел в наши инпуты в абзац выводилось среднее арифметическое введенных чисел. */}
 
 
     </>
