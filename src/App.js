@@ -4,95 +4,110 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  // const [value1, setValue1] = useState(0);
-  // const [value2, setValue2] = useState(0);
-  // const [result, setResult] = useState(0);
-
-  // console.log(date.getHours() + ':' + date.getMinutes() + ':' + date.getSeconds()
-  //     + ' ' + addzero(date.getDate()) + '.' + addzero(date.getMonth() + 1) + '.' + date.getFullYear());
-
-  // let date= new Date();
-  // let nowdate=date.getFullYear()+'-'+Number(date.getMonth()+1)+'-'+date.getDate();
-  //   const [value1, setValue1] = useState(nowdate);
-  //   const [value2, setValue2] = useState(nowdate);
-  //   const [result, setResult] = useState(0);
-  //   function red() {
-  //     let arr1 = value1.split("-");
-  //     let date1 = new Date(arr1[0], Number(arr1[1]) - 1, arr1[2]);
-  //     let arr2 = value2.split("-");
-  //     let date2 = new Date(arr2[0], Number(arr2[1]) - 1, arr2[2]);
-  //     let a =Math.round(date2.getTime() - date1.getTime()) / (1000 * 60 * 60 * 24);
-  //     return a;
-  //   }
-
+  // let transl = [];
+  // transl["А"] = "A";
+  // transl["а"] = "a";
+  // transl["Б"] = "B";
+  // transl["б"] = "b";
+  // transl["В"] = "V";
+  // transl["в"] = "v";
+  // transl["Г"] = "G";
+  // transl["г"] = "g";
+  // transl["Д"] = "D";
+  // transl["д"] = "d";
+  // transl["Е"] = "E";
+  // transl["е"] = "e";
+  // transl["Ё"] = "Yo";
+  // transl["ё"] = "yo";
+  // transl["Ж"] = "Zh";
+  // transl["ж"] = "zh";
+  // transl["З"] = "Z";
+  // transl["з"] = "z";
+  // transl["И"] = "I";
+  // transl["и"] = "i";
+  // transl["Й"] = "J";
+  // transl["й"] = "j";
+  // transl["К"] = "K";
+  // transl["к"] = "k";
+  // transl["Л"] = "L";
+  // transl["л"] = "l";
+  // transl["М"] = "M";
+  // transl["м"] = "m";
+  // transl["Н"] = "N";
+  // transl["н"] = "n";
+  // transl["О"] = "O";
+  // transl["о"] = "o";
+  // transl["П"] = "P";
+  // transl["п"] = "p";
+  // transl["Р"] = "R";
+  // transl["р"] = "r";
+  // transl["С"] = "S";
+  // transl["с"] = "s";
+  // transl["Т"] = "T";
+  // transl["т"] = "t";
+  // transl["У"] = "U";
+  // transl["у"] = "u";
+  // transl["Ф"] = "F";
+  // transl["ф"] = "f";
+  // transl["Х"] = "X";
+  // transl["х"] = "x";
+  // transl["Ц"] = "C";
+  // transl["ц"] = "c";
+  // transl["Ч"] = "Ch";
+  // transl["ч"] = "ch";
+  // transl["Ш"] = "Sh";
+  // transl["ш"] = "sh";
+  // transl["Щ"] = "Shh";
+  // transl["щ"] = "shh";
+  // transl["Ъ"] = '"';
+  // transl["ъ"] = '"';
+  // transl["Ы"] = "Y'";
+  // transl["ы"] = "y'";
+  // transl["Ь"] = "'";
+  // transl["ь"] = "'";
+  // transl["Э"] = "E'";
+  // transl["э"] = "e'";
+  // transl["Ю"] = "Yu";
+  // transl["ю"] = "yu";
+  // transl["Я"] = "Ya";
+  // transl["я"] = "ya";
+  // const [value, setValue] = useState("");
   // const [value1, setValue1] = useState("");
-  // const [result, setResult] = useState(0);
-  // function fact(s) {
-  //   let a = 1;
-  //   for (let i = 1; i <= s; i++) {
-  //     a *= i;
+  // function translit(event) {
+  //   let a = event.target.value;
+  //   setValue1(a);
+  //   let per = value;
+  //   let elem = a.slice(a.length - 1);
+  //   console.log(transl[elem]);
+  //   if (transl[elem] != undefined) {
+  //     setValue((per += transl[elem]));
+  //   } else {
+  //     setValue((per += elem));
   //   }
-  //   console.log(a);
-  //   return a;
   // }
 
+  // const [value, setValue] = useState("");
   // const [value1, setValue1] = useState("");
-  // const [result, setResult] = useState(0);
-  // function del(num) {
-  //   let a = [];
-  //   for (let i = 1; i <= num; i++) {
-  //     if (num % i == 0) {
-  //       a.push(i);
-  //     }
+  // function sum(event) {
+  //   let valuev = event.target.value;
+  //   setValue(valuev);
+  //   let arr = valuev.split("\n");
+  //   let su = 0;
+  //   for (let a of arr) {
+  //     su += Number(a);
   //   }
-  //   console.log(a);
-  //   let b = 1;
-  //   for (let u of a) {
-  //     b *= u;
-  //   }
-  //   return b;
+  //   setValue1(su);
   // }
 
-  return(
+  return (
     <>
-      {/* <input value={value1} onChange={event=>setValue1(event.target.value)} />
-      <input value={value2} onChange={event=>setValue2(event.target.value)} />
-      <button onClick={()=>setResult(Number(value1)+Number(value2))}>btn</button>
-      <button onClick={()=>setResult(Number(value1)*Number(value2))}>btn</button>
-      <p>result: {result}</p>
-      Даны два инпута, две кнопки и абзац. Пусть в инпуты вводятся числа. По нажатию на первую кнопку найдите сумму чисел, а по нажатию на вторую кнопку - произведение. Результат выводите в абзац. */}
+      {/* <textarea value={value1} onChange={translit} />
+      <p>{value}</p>
+      Пусть в textarea вводится текст. Сделайте так, чтобы в абзац выводился транслит вводимого текста. */}
 
-      {/* <input
-        value={value1}
-        onFocus={() => setValue1("")}
-        onChange={(event) => setValue1(event.target.value)}
-      />
-      <input
-        value={value2}
-        onFocus={() => setValue2("")}
-        onChange={(event) => setValue2(event.target.value)}
-      />
-      <button onClick={() => setResult(red())}>btn</button>
-      <p>result: {result}</p> */}
-      {/* Даны два инпута, кнопка и абзац. Пусть в инпуты вводятся даты в формате 2025-12-31. По нажатию на кнопку найдите разницу между датами в днях и результат выведите в абзац.*/}
-      {/* Модифицируйте предыдущую задачу так, чтобы по умолчанию в инпутах стояла текущая дата. */}
-
-      {/* <input
-        value={value1}
-        onChange={(event) => setValue1(event.target.value)}
-        onBlur={() => setResult(fact(value1))}
-      />
-      <p>result: {result}</p>
-      Дан инпут и абзац. В инпут вводится число. По потери фокуса выведите в абзац сумму цифр введенного числа. */}
-
-      {/* <input
-        value={value1}
-        onChange={(event) => setValue1(event.target.value)}
-        onBlur={() => setResult(del(Number(value1)))}
-      />
-      <p>result: {result}</p>
-      Дан инпут и абзац. В инпут вводится число. По потери фокуса выведите в абзац произведение делителей введенного числа. */}
-
+      {/* <textarea value={value} onChange={sum} />
+      <p>{value1}</p>
+      Пусть в textarea на каждой строке вводятся числа. Сделайте так, чтобы по мере ввода в абзац выводилась сумма введенных чисел. */}
 
 
     </>
