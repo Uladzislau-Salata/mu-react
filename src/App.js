@@ -4,91 +4,50 @@ import React, { useState } from "react";
 import "./App.css";
 
 function App() {
-  // const[checked,setChecked]=useState(false);
-  // const[hello,setHello]=useState('');
-  // function hel() {
-  //   if (checked) {
-  //     setHello('Privet');
-  //   } else {
-  //     setHello('Poka');
-  //   }
+  // const [valuee, setValuee] = useState("");
+  // function handleChange(ev) {
+  //   setValuee(ev.target.value);
   // }
 
-  // const[checked1,setChecked1]=useState(true);
-  // const[checked2,setChecked2]=useState(true);
-  // const[checked3,setChecked3]=useState(true);
-  // const[text1,setText1]=useState('');
-  // const[text2,setText2]=useState('');
-  // const[text3,setText3]=useState('');
-  // function changeText1() {
-  //   setChecked1(!checked1);
-  //   setText1(String(checked1));
-  // }
-  // function changeText2() {
-  //   setChecked2(!checked2);
-  //   setText2(String(checked2));
-  // }
-  // function changeText3() {
-  //   setChecked3(!checked3);
-  //   setText3(String(checked3));
-  // }
-
-  // const[checked1,setChecked1]=useState(true);
-  // let massage;
-  // if (checked1) {
-  // massage=<div>
-  // 	<h2>Ура, вам уже есть 18</h2>
-  // 	<p>
-  // 		здесь расположен контент только для
-  // 			взрослых
-  // 	</p>
-  // </div>;
-  // } else {
-  //   massage=<div>
-  // 	<p>
-  // 		увы, вам еще нет 18 лет:(
-  // 	</p>
-  // </div>;
-  // }
-
-  // const [checked1, setChecked1] = useState(true);
-  // let massage;
-  // if (checked1) {
-  //   massage=<p>1234</p>;
-  // } else {
-  //   massage=<p hidden >1234</p>;
-  // }
+  // const [valuee, setValuee] = useState("");
+  // const texts = ["Гродно", "Мосты", "Минск", "Брест"];
+  // const options = texts.map((elem, endex) => {
+  //   return <option key={endex}>{elem}</option>;
+  // });
 
 
+// const [valuee,setValuee]=useState('');
+// const arr=['0-12','13-17','18-25','25+'];
+// const message=arr.map((elem,index)=>{
+//   return <option key={index} value={index}>{elem}</option>;
+// });
 
   return (
     <>
-      {/* <input type='checkbox' onChange={()=>setChecked(!checked)} ></input>
-<button onClick={hel}>click</button>
-<p>{hello}</p>
-Дан чекбокс, кнопка и абзац. По клику на кнопку, если чекбокс отмечен, выведите в абзац текст приветствия с пользователем, а если не отмечен - текст прощания. */}
+      {/* <div>
+        <select value={valuee} onChange={handleChange}>
+          <option>Мосты</option>
+          <option>Гродно</option>
+          <option>Минск</option>
+          <option>Брест</option>
+        </select>
+      </div>
+      <p>{valuee}</p>
+      Сделайте выпадающий список городов. Сделайте также абзац, в который будет выводиться выбор пользователя. */}
 
-      {/* <p>Отметьте языки которые вы знаете</p>
-<p>HTML<input type='checkbox' onChange={changeText1} ></input></p>
-<p>CSS<input type='checkbox' onChange={changeText2} ></input></p>
-<p>JS<input type='checkbox' onChange={changeText3} ></input></p>
-<p>HTML {text1}</p>
-<p>CSS {text2}</p>
-<p>JS {text3}</p>
-С помощью трех чекбоксов попросите пользователя выбрать языки, которые он знает: html, css и js. Результат выбора по каждому языку выводите в отдельные абзацы. */}
+      {/* <select value={valuee} onChange={(ev) => setValuee(ev.target.value)}>
+        {options}
+      </select>
+      <p>Ваш выбор: {valuee}</p>
+      Пусть в массиве хранится список городов. Выведите с помощью цикла выпадающий список этих городов. */}
 
-      {/* <input type='checkbox' checked={checked1} onChange={()=>setChecked1(!checked1)} />
-<div>{massage}</div>
-Дан чекбокс. С помощью чекбокса спросите у пользователя, если ли ему уже 18 лет. Если чекбокс отмечен, покажите пользователю следующий блок кода: */}
-
-      {/* <input
-        type="checkbox"
-        checked={checked1}
-        onChange={() => setChecked1(!checked1)}
-      />
-      <div>{massage}</div>
-      Дан чекбокс и абзац. Если чекбокс отмечен, пусть абзац будет видимым на экране, а если не отмечен - спрячьте его. */}
-
+{/* <select value={valuee} onChange={ev=>setValuee(ev.target.value)}>
+{message}
+</select>
+<p>
+  Ваш выбор: {arr[valuee]}
+</p>
+С помощью выпадающего списка предложите пользователю выбрать к какой возрастной группе он относится: от 0 до 12 лет, от 13 до 17, от 18 до 25, либо старше 25 лет. */}
 
 
     </>
