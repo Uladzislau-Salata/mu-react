@@ -42,9 +42,9 @@ function App() {
         <td>{elem.name}</td>
         <td>{elem.catg}</td>
         <td>{elem.cost}</td>
-        {/* <td>
+        <td>
           <button onClick={() => setIddd(elem.id)}>choice</button>
-        </td> */}
+        </td>
       </tr>
     );
   });
@@ -57,25 +57,41 @@ function App() {
     </tr>
   );
   // const [iddd, setIddd] = useState(null);
-  // function takevalue(prop) {
-  //   return initProds.reduce((nu, elem) => {
-  //     if (elem.id == iddd) {
-  //       return elem[prop];
-  //     } else {
-  //       return nu;
-  //     }
-  //   }, "");
+  // function getvalue(prop) {
+  //   if (iddd) {
+  //     return initProds.reduce(
+  //       (res, elem) => (elem.id === iddd ? elem[prop] : res),
+  //       ""
+  //     );
+  //   } else {
+  //     return obj[prop];
+  //   }
   // }
-  // function changevalue(prop, ev) {
-  //   setIniProds(
-  //     initProds.map((elem) => {
-  //       if (elem.id == iddd) {
-  //         return { ...elem, [prop]: ev.target.value };
-  //       } else {
-  //         return elem;
-  //       }
-  //     })
-  //   );
+  // const [obj, setObj] = useState(getObj());
+  // function getObj() {
+  //   return {
+  //     id: idd(),
+  //     name: "",
+  //     catg: "",
+  //     cost: "",
+  //   };
+  // }
+  // function changing(prop, ev) {
+  //   if (iddd) {
+  //     setIniProds( initProds.map((elem) =>
+  //       elem.id === iddd ? { ...elem, [prop]: ev.target.value } : elem
+  //     ));
+  //   } else {
+  //     setObj({ ...obj, [prop]: ev.target.value });
+  //   }
+  // }
+  // function saveitems() {
+  //   if (iddd) {
+  //     setIddd(null);
+  //   } else {
+  //     setIniProds([...initProds, obj ]);
+  //     setObj(getObj);
+  //   }
   // }
   return (
     <>
@@ -83,12 +99,11 @@ function App() {
         <thead>{head}</thead>
         <tbody>{result}</tbody>
       </table>
-      {/* <input value={takevalue("name")} onChange={(ev) => changevalue("name", ev)}/>
-      <input value={takevalue("catg")} onChange={(ev) => changevalue("catg", ev)}/>
-      <input value={takevalue("cost")} onChange={(ev) => changevalue("cost", ev)}/>
-<button onClick={()=>setIddd(null)}>save</button>
-Возьмите таблицу с продуктами initProds. Сделайте под таблицей форму для редактирования продукта. Добавьте в таблицу еще одну колонку, в которой будут кнопки для редактирования продуктов. */}
-
+      {/* <input value={getvalue("name")} onChange={(ev) => changing("name", ev)} />
+      <input value={getvalue("catg")} onChange={(ev) => changing("catg", ev)} />
+      <input value={getvalue("cost")} onChange={(ev) => changing("cost", ev)} />
+      <button onClick={saveitems}>save</button>
+      Возьмите таблицу с продуктами initProds. Сделайте под таблицей универсальную форму для добавления и редактирования продукта. */}
 
     </>
   );
