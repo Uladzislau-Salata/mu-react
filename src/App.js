@@ -9,51 +9,85 @@ function App() {
     let a = nanoid(s);
     return a;
   }
-
-  // const [valuee, setValuee] = useState("text");
-  // const [edit, setEdit] = useState(false);
-  // let elem;
-  // if (!edit) {
-  //   elem = <span onClick={()=>setEdit(true)}>{valuee}</span>;
-  // } else {
-  //   elem = (
-  //     <input
-  //       value={valuee}
-  //       onChange={(ev) => setValuee(ev.target.value)}
-  //       onBlur={()=>setEdit(false)}
-  //     />
-  //   );
+  // const initNotes = [
+  //   { text: "note1", isEdit: false },
+  //   { text: "note2", isEdit: false },
+  //   { text: "note3", isEdit: false },
+  // ];
+  // const [notes, setNotes] = useState(initNotes);
+  // function startEdit(index) {
+  //   const copy = Object.assign([], notes);
+  //   copy[index].isEdit = true;
+  //   setNotes(copy);
   // }
+  // function endEdit (index) {
+  //   const copy=Object.assign([],notes);
+  //   copy[index].isEdit=false;
+  //   setNotes(copy);
+  // }
+  // function chang(index, ev) {
+  //   const copy = Object.assign([], notes);
+  //   copy[index].text = ev.target.value;
+  //   setNotes(copy);
+  // }
+  // const result = notes.map((note, index) => {
+  //   let elem;
+  //   if (!note.isEdit) {
+  //     elem = (
+  //       <span onClick={() => startEdit(index)}>
+  //         {note.text}
+  //       </span>
+  //     );
+  //   } else {
+  //     elem = (
+  //       <input
+  //       value={note.text}
+  //       onChange={(ev) => chang(index, ev)}
+  //       onBlur={()=>endEdit(index)}/>
+  //     );
+  //   }
+  //   return <li key={index}>{elem}</li>;
+  // });
 
-  const [valuee, setValuee] = useState("text");
-  const [edit, setEdit] = useState(false);
-  // const[elem,setElem]=useState('');
-  let elem;
-  if (!edit) {
-    elem = <p>{valuee}</p>;
-  } else {
-    elem = (
-      <input
-        value={valuee}
-        onChange={(ev) => change(ev)}
-        onBlur={() => setEdit(false)}
-      />
-    );
-  }
-  function change(ev) {
-    setValuee(ev.target.value);
-  }
+  // const initNotes = [
+  //   { text: "note1", isEdit: false },
+  //   { text: "note2", isEdit: false },
+  //   { text: "note3", isEdit: false },
+  // ];
+  // const [notes, setNotes] = useState(initNotes);
+  // const result = notes.map((note, index) => {
+  //   let elem;
+  //   if (!note.isEdit) {
+  //     elem = <p>{note.text}</p>;
+  //   } else {
+  //     elem = <input value={note.text} onChange={(ev) => change(ev, index)} onBlur={()=>evntstartstop(index)} />;
+  //   }
+  //   return (
+  //     <li key={index}>
+  //       {elem}
+  //       <button onClick={() => evntstartstop(index)}>change/accept</button>
+  //     </li>
+  //   );
+  // });
+  // function evntstartstop(index) {
+  //   const copy = Object.assign([], notes);
+  //   copy[index].isEdit = !copy[index].isEdit;
+  //   setNotes(copy);
+  // }
+  // function change(ev, index) {
+  //   const copy = Object.assign([], notes);
+  //   copy[index].text = ev.target.value;
+  //   setNotes(copy);
+  // }
 
   return (
     <>
-      {/* {elem}
-  Давайте сделаем так, чтобы по клику на абзац в нем появлялся инпут, с помощью которого можно будет поредактировать текст абзаца. После потери фокуса инпут должен убираться и в абзаце должен появится отредактированный текст. */}
+      {/* <ul>{result}</ul>
+      Давайте выведем этот массив в виде списка ul. Затем сделаем так, чтобы по клику на любую лишку в ней появлялся инпут для редактирования ее текста. */}
 
-      {elem}
-      <button onClick={() => setEdit(true)}>red inp</button>
-      <button onClick={() => setEdit(false)}>show p</button>
-      Дан абзац и две кнопки. Пусть по клику на первую кнопку абзац переходит в режим редактирования, а по клику на вторую - в режим показа. Реализуйте описанное.
-      
+      {/* <ul>{result}</ul>
+      Дан массив. Выведите его в виде списка ul. В конце каждой li сделайте кнопку для редактирования. Пусть по первому нажатию на эту кнопку в тексте li появляется инпут для редактирования, а по второму нажатию - появляется измененный текст. */}
+
     </>
   );
 }
