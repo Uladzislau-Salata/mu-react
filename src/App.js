@@ -10,89 +10,50 @@ function App() {
     return a;
   }
 
-  const initProds = [
-    {
-      id: idd(),
-      name: "prod1",
-      cost: "cost1",
-      desc: "long description 1",
-      comm: "my super comment 1",
-      showd: false,
-      showc: false,
-    },
-    {
-      id: idd(),
-      name: "prod2",
-      cost: "cost2",
-      desc: "long description 2",
-      comm: "my super comment 2",
-      showd: false,
-      showc: false,
-    },
-    {
-      id: idd(),
-      name: "prod3",
-      cost: "cost3",
-      desc: "long description 3",
-      comm: "my super comment 3",
-      showd: false,
-      showc: false,
-    },
-  ];
-  const [notes, setNotes] = useState(initProds);
-  const result = notes.map((note) => {
-    let descc;
-    let commm;
-    if (note.showd) {
-      descc = <li>{note.desc}</li>;
-    }
-    if (note.showc) {
-      commm = <li>{note.comm}</li>;
-    }
-    return (
-      <ul key={note.id}>
-        <li>{note.name}</li>
-        <li>{note.cost}</li>
-        {descc}
-        {commm}
-        <button onClick={() => showDesc(note.id)}>
-          {note.showd ? "hide desc" : "show desc"}
-        </button>
-        <button onClick={() => showComm(note.id)}>
-          {note.showc ? "hide comm" : "show comm"}
-        </button>
-      </ul>
-    );
-  });
-  function showDesc(id) {
-    setNotes(
-      notes.map((note) => {
-        if (note.id === id) {
-          return { ...note, showd: !note.showd };
-        } else {
-          return note;
-        }
-      })
+  // const [valuee, setValuee] = useState("text");
+  // const [edit, setEdit] = useState(false);
+  // let elem;
+  // if (!edit) {
+  //   elem = <span onClick={()=>setEdit(true)}>{valuee}</span>;
+  // } else {
+  //   elem = (
+  //     <input
+  //       value={valuee}
+  //       onChange={(ev) => setValuee(ev.target.value)}
+  //       onBlur={()=>setEdit(false)}
+  //     />
+  //   );
+  // }
+
+  const [valuee, setValuee] = useState("text");
+  const [edit, setEdit] = useState(false);
+  // const[elem,setElem]=useState('');
+  let elem;
+  if (!edit) {
+    elem = <p>{valuee}</p>;
+  } else {
+    elem = (
+      <input
+        value={valuee}
+        onChange={(ev) => change(ev)}
+        onBlur={() => setEdit(false)}
+      />
     );
   }
-  function showComm(id) {
-    setNotes(
-      notes.map((note) => {
-        if (note.id === id) {
-          return { ...note, showc: !note.showc };
-        } else {
-          return note;
-        }
-      })
-    );
+  function change(ev) {
+    setValuee(ev.target.value);
   }
 
   return (
     <>
-      {result}
-      Выведите этот массив в виде списка ul. Сделайте так, чтобы описание и
-      отзыв изначально были не показаны, а для их показа было две кнопки в конце
-      каждой li.
+      {/* {elem}
+  Давайте сделаем так, чтобы по клику на абзац в нем появлялся инпут, с помощью которого можно будет поредактировать текст абзаца. После потери фокуса инпут должен убираться и в абзаце должен появится отредактированный текст. */}
+
+      {elem}
+      <button onClick={() => setEdit(true)}>red inp</button>
+      <button onClick={() => setEdit(false)}>show p</button>
+      Дан абзац и две кнопки. Пусть по клику на первую кнопку абзац переходит в режим редактирования, а по клику на вторую - в режим показа. Реализуйте описанное.
+      
     </>
   );
 }
