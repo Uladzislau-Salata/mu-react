@@ -1,8 +1,8 @@
 import { nanoid } from "nanoid";
 import React, { useState } from "react";
 import "./App.css";
-// import "./Product";
-// import Product from "./Product";
+import "./Product";
+import Product from "./Product";
 
 function App() {
   function idd(s) {
@@ -12,13 +12,10 @@ function App() {
 
   return (
     <>
-      {/* <div>
-        <Product />
-        <Product />
-        <Product />
-      </div>
-      Сделайте компонент User, который будет выводить данные юзеров. Пусть сейчас этот компонент просто выводит какой-нибудь текст. Используйте этот компонент в компоненте App.
-      Добавьте в компонент App несколько экземляров компонента User, созданного вами в предыдущей задаче. */}
+<Product name="name1" surname="surname1" salary="100"/>
+<Product name="name2" surname="surname2" salary="200"/>
+<Product name="name3" surname="surname3" salary="300"/>
+Сделайте компонент Employee, выводящий данные работника на экран. Пусть этими данными будут фамилия, имя, отчество и зарплата. Оформите эти данные в нужную вам верстку. Выведите в компоненте App трех работников с разными данными.
 
     </>
   );
