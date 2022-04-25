@@ -1,14 +1,7 @@
 import React from "react";
 
-function Product({key, id, name, surname, age }) {
-//   console.log(id);
-  return (
-    <tr key={id}>
-      <td>{name}</td>
-      <td>{surname}</td>
-      <td>{age}</td>
-    </tr>
-  );
+function Product({name,cost}) {
+    return <div>name:<span> {name}</span>; cost:<span> {cost}</span>;
+    </div>;
 }
-
 export default Product;
