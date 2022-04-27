@@ -1,7 +1,13 @@
 import React from "react";
 
-function Product({name,cost}) {
-    return <div>name:<span> {name}</span>; cost:<span> {cost}</span>;
-    </div>;
+function Product({id, name, cost, cart,addToCart }) {
+  return (
+    <div>
+      name:<span> {name}</span>;
+      cost:<span> {cost}</span>;
+      <span>{cart? 'in cart':'not in cart'}</span>
+      <button onClick={()=>addToCart(id)}>add</button>
+    </div>
+  );
 }
 export default Product;
