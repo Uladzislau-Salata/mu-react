@@ -1,13 +1,14 @@
 import React from "react";
+import ProductField from "./ProductField";
 
-function Product({id, name, cost, cart,addToCart }) {
+
+function Product({ id, name, cost, catg, changeField }) {
   return (
-    <div>
-      name:<span> {name}</span>;
-      cost:<span> {cost}</span>;
-      <span>{cart? 'in cart':'not in cart'}</span>
-      <button onClick={()=>addToCart(id)}>add</button>
-    </div>
+    <tr>
+      <ProductField id={id} text={name} type="name" changeField={changeField} />
+      <ProductField id={id} text={cost} type="cost" changeField={changeField} />
+      <ProductField id={id} text={catg} type="catg" changeField={changeField} />
+    </tr>
   );
 }
 export default Product;

@@ -1,20 +1,20 @@
 import { nanoid } from "nanoid";
-import React, { useState } from "react";
 import "./App.css";
 import "./Products";
 import Products from "./Products";
-import './Users';
+import "./Users";
 import Users from "./Users";
-
 
 function App() {
   // function idd(s) {
   //   let a = nanoid(s);
   //   return a;
   // }
-  return <>
-  {/* <Products/> */}
-<Users/>
-  </>;
+  return (
+    <>
+      {/* <Products/> */}
+      <Users />
+    </>
+  );
 }
 export default App;

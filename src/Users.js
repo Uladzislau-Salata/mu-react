@@ -9,9 +9,9 @@ function Users() {
   }
 
   const initUsers = [
-    { id: idd(), name: "user1", surname: "surn1", age: 30, isEdit: false },
-    { id: idd(), name: "user2", surname: "surn2", age: 31, isEdit: false },
-    { id: idd(), name: "user3", surname: "surn3", age: 32, isEdit: false },
+    { id: idd(), name: "user1", surname: "surn1", age: 30 },
+    { id: idd(), name: "user2", surname: "surn2", age: 31 },
+    { id: idd(), name: "user3", surname: "surn3", age: 32 },
   ];
   const [users, setUsers] = useState(initUsers);
   const result = users.map((user) => {
@@ -22,22 +22,10 @@ function Users() {
         name={user.name}
         surname={user.surname}
         age={user.age}
-        isEdit={user.isEdit}
-        toggleMode={toggleMode}
         editUser={editUser}
       />
     );
   });
-  function toggleMode(id) {
-    setUsers(
-      users.map((user) => {
-        if (user.id === id) {
-          user.isEdit = !user.isEdit;
-        }
-        return user;
-      })
-    );
-  }
   function editUser(id, field, ev) {
     setUsers(
       users.map((user) => {
@@ -48,9 +36,15 @@ function Users() {
       })
     );
   }
-  return <div>{result}</div>;
-  // Легко заметить, что код для названия продукта и для цены продукта практически дублируется. Давайте вынесем этот код в отдельный компонент ProductField:
-  
+  return (
+    <div>
+      <table>
+        <tbody>{result}</tbody>
+      </table>
+    </div>
+    // Давайте выведем эти продукты в виде HTML таблицы. При этом сделаем так, чтобы по нажатию на любую ячейку таблицы в этой ячейке появлялся инпут для редактирования. Для решения задачи сделаем 3 компонента.
+    
+  );
 }
 
 export default Users;

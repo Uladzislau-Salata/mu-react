@@ -4,9 +4,9 @@ import Product from "./Product";
 
 function Products() {
   const initProds = [
-    { id: idd(), name: "product1", cost: 100, inCart: false },
-    { id: idd(), name: "product2", cost: 200, inCart: false },
-    { id: idd(), name: "product3", cost: 300, inCart: false },
+    { id: idd(), name: "prod1", cost: "cost1", catg: "catg1" },
+    { id: idd(), name: "prod2", cost: "cost2", catg: "catg2" },
+    { id: idd(), name: "prod3", cost: "cost3", catg: "catg3" },
   ];
   function idd(s) {
     let a = nanoid(s);
@@ -20,27 +20,29 @@ function Products() {
         id={prod.id}
         name={prod.name}
         cost={prod.cost}
-        cart={prod.inCart}
-        addToCart={addToCart}
+        catg={prod.catg}
+        changeField={changeField}
       />
     );
   });
-  function addToCart(id) {
+  function changeField(id, field, event) {
     setProds(
       prods.map((prod) => {
-        if (prod.id === id) {
-          prod.inCart = true;
+        if (prod.id == id) {
+          prod[field] = event.target.value;
         }
+
         return prod;
       })
     );
   }
-  return
-  <div>{result}</div>
-  // Пусть теперь мы хотим изменять наши продукты. Сделаем, к примеру, кнопку, которая будет помещать наш продукт в корзин
-  
-  ;
-
+  return (
+    <div>
+      <table>
+        <tbody>{result}</tbody>
+      </table>
+    </div>
+  );
 }
 
 export default Products;
